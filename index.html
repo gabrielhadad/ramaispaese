@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lista de Ramais - Completa</title>
+<title>Lista de Ramais</title>
 
 <style>
 body{
@@ -55,6 +55,9 @@ body{
     box-shadow:0 4px 12px rgba(0,0,0,0.05);
     transition:0.2s ease;
     border:1px solid #e2e8f0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
 .card:hover{
@@ -65,45 +68,28 @@ body{
 .nome{
     font-size:17px;
     font-weight:600;
-    margin-bottom:10px;
+    color:#0f172a;
 }
 
 .ramal{
     font-size:26px;
     font-weight:700;
     color:#2563eb;
-}
-
-.info{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.botao{
-    text-decoration:none;
-    background:#2563eb;
-    color:white;
-    padding:10px 14px;
-    border-radius:12px;
-    font-size:14px;
-    transition:0.2s;
-}
-
-.botao:hover{
-    background:#1d4ed8;
+    font-family:'Courier New', monospace;
 }
 
 @media(max-width:600px){
-
     body{
         padding:15px;
     }
-
     .titulo{
         font-size:28px;
     }
-
+    .card{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:10px;
+    }
 }
 </style>
 </head>
@@ -112,112 +98,104 @@ body{
 
 <div class="container">
 
-<h1 class="titulo">📞 Lista de Ramais - Completa</h1>
+<h1 class="titulo">📞 Lista de Ramais</h1>
 
-<input
-type="text"
-class="pesquisa"
-id="pesquisa"
-placeholder="Pesquisar nome ou ramal..."
-onkeyup="filtrarRamais()">
+<input type="text" class="pesquisa" id="pesquisa" placeholder="Pesquisar nome ou ramal..." onkeyup="filtrarRamais()">
 
 <div class="grid" id="listaRamais">
 
-<!-- PRIMEIRA COLUNA (A) -->
-<div class="card"><div class="nome">Adriana Fraga Dos Santos</div><div class="info"><div class="ramal">5274</div><a class="botao" href="tel:5274">Ligar</a></div></div>
-<div class="card"><div class="nome">Aline Panizzutti</div><div class="info"><div class="ramal">5222</div><a class="botao" href="tel:5222">Ligar</a></div></div>
-<div class="card"><div class="nome">Ana Carolina Silva Da Silva</div><div class="info"><div class="ramal">5215</div><a class="botao" href="tel:5215">Ligar</a></div></div>
-<div class="card"><div class="nome">Ana Karolina Ferreira Witt</div><div class="info"><div class="ramal">5227</div><a class="botao" href="tel:5227">Ligar</a></div></div>
-<div class="card"><div class="nome">Ana Paula Carvalho</div><div class="info"><div class="ramal">5221</div><a class="botao" href="tel:5221">Ligar</a></div></div>
-<div class="card"><div class="nome">Angelina Ines Castro Mattia</div><div class="info"><div class="ramal">5275</div><a class="botao" href="tel:5275">Ligar</a></div></div>
-<div class="card"><div class="nome">Bárbara Petersen Rosa Raphaelli</div><div class="info"><div class="ramal">5332</div><a class="botao" href="tel:5332">Ligar</a></div></div>
-<div class="card"><div class="nome">Brenda Silveira Acosta</div><div class="info"><div class="ramal">5263</div><a class="botao" href="tel:5263">Ligar</a></div></div>
-<div class="card"><div class="nome">Brenda Wetter Ipe Da Silva</div><div class="info"><div class="ramal">5267</div><a class="botao" href="tel:5267">Ligar</a></div></div>
-<div class="card"><div class="nome">Bruno Mezzomo Da Silva</div><div class="info"><div class="ramal">5245</div><a class="botao" href="tel:5245">Ligar</a></div></div>
-<div class="card"><div class="nome">Camila Ferraz Ferreira</div><div class="info"><div class="ramal">5242</div><a class="botao" href="tel:5242">Ligar</a></div></div>
-<div class="card"><div class="nome">Camila Schwambach Azevedo</div><div class="info"><div class="ramal">5283</div><a class="botao" href="tel:5283">Ligar</a></div></div>
-<div class="card"><div class="nome">Caroline Schonhofen da Rosa</div><div class="info"><div class="ramal">5284</div><a class="botao" href="tel:5284">Ligar</a></div></div>
-<div class="card"><div class="nome">Cinthia Dos Santos Rodrigues</div><div class="info"><div class="ramal">5268</div><a class="botao" href="tel:5268">Ligar</a></div></div>
-<div class="card"><div class="nome">Cristiano Ohlweiler Ferreira</div><div class="info"><div class="ramal">5250</div><a class="botao" href="tel:5250">Ligar</a></div></div>
-<div class="card"><div class="nome">David Da Costa Lopes</div><div class="info"><div class="ramal">5240</div><a class="botao" href="tel:5240">Ligar</a></div></div>
-<div class="card"><div class="nome">Débora Torbis Rocha</div><div class="info"><div class="ramal">5295</div><a class="botao" href="tel:5295">Ligar</a></div></div>
-<div class="card"><div class="nome">Drieze Prado Silva</div><div class="info"><div class="ramal">5288</div><a class="botao" href="tel:5288">Ligar</a></div></div>
-<div class="card"><div class="nome">Elisa Torelly</div><div class="info"><div class="ramal">5228</div><a class="botao" href="tel:5228">Ligar</a></div></div>
-<div class="card"><div class="nome">Emmanuel Frias Sampaio</div><div class="info"><div class="ramal">5236</div><a class="botao" href="tel:5236">Ligar</a></div></div>
-<div class="card"><div class="nome">Enimara Marques Pereira</div><div class="info"><div class="ramal">5294</div><a class="botao" href="tel:5294">Ligar</a></div></div>
-<div class="card"><div class="nome">Eric Tempass Hafemeister</div><div class="info"><div class="ramal">5280</div><a class="botao" href="tel:5280">Ligar</a></div></div>
-<div class="card"><div class="nome">Fabiana Dos Santos Da Silva</div><div class="info"><div class="ramal">5253</div><a class="botao" href="tel:5253">Ligar</a></div></div>
-<div class="card"><div class="nome">Fabiana Ferreira Da Silva</div><div class="info"><div class="ramal">5237</div><a class="botao" href="tel:5237">Ligar</a></div></div>
-<div class="card"><div class="nome">Fabiana Ramos Zwiernik</div><div class="info"><div class="ramal">5213</div><a class="botao" href="tel:5213">Ligar</a></div></div>
-<div class="card"><div class="nome">Fabiane Batisti</div><div class="info"><div class="ramal">5290</div><a class="botao" href="tel:5290">Ligar</a></div></div>
-<div class="card"><div class="nome">Fabricio Brum Dos Santos</div><div class="info"><div class="ramal">5296</div><a class="botao" href="tel:5296">Ligar</a></div></div>
-<div class="card"><div class="nome">Felipe Kliemann de Oliveira</div><div class="info"><div class="ramal">5304</div><a class="botao" href="tel:5304">Ligar</a></div></div>
-<div class="card"><div class="nome">Fernanda Palombini Moralles</div><div class="info"><div class="ramal">5241</div><a class="botao" href="tel:5241">Ligar</a></div></div>
-<div class="card"><div class="nome">Gabriel Angelo Hadad</div><div class="info"><div class="ramal">5271</div><a class="botao" href="tel:5271">Ligar</a></div></div>
-<div class="card"><div class="nome">Geniane Ramos Aguette</div><div class="info"><div class="ramal">5238</div><a class="botao" href="tel:5238">Ligar</a></div></div>
-<div class="card"><div class="nome">Glênio Luis Ohlweiler Ferreira</div><div class="info"><div class="ramal">5243</div><a class="botao" href="tel:5243">Ligar</a></div></div>
-<div class="card"><div class="nome">Guilherme Dresch Da Silveira Jacques</div><div class="info"><div class="ramal">5287</div><a class="botao" href="tel:5287">Ligar</a></div></div>
-<div class="card"><div class="nome">Ingrid Renz Birnfeld</div><div class="info"><div class="ramal">5219</div><a class="botao" href="tel:5219">Ligar</a></div></div>
-<div class="card"><div class="nome">Jaqueline Cristiane Gotz</div><div class="info"><div class="ramal">5259</div><a class="botao" href="tel:5259">Ligar</a></div></div>
-<div class="card"><div class="nome">Jean Carlo Dickel Bilhar</div><div class="info"><div class="ramal">5204</div><a class="botao" href="tel:5204">Ligar</a></div></div>
-<div class="card"><div class="nome">Jenifer Michele Fulber Corrêa Da Silva</div><div class="info"><div class="ramal">5205</div><a class="botao" href="tel:5205">Ligar</a></div></div>
-<div class="card"><div class="nome">Jéssica Thais Herrera</div><div class="info"><div class="ramal">5216</div><a class="botao" href="tel:5216">Ligar</a></div></div>
-<div class="card"><div class="nome">Joao Francisco Viegas</div><div class="info"><div class="ramal">5214</div><a class="botao" href="tel:5214">Ligar</a></div></div>
-<div class="card"><div class="nome">João Paulo Alves De Lima</div><div class="info"><div class="ramal">5293</div><a class="botao" href="tel:5293">Ligar</a></div></div>
-<div class="card"><div class="nome">Kelly De Cassia Vaxilevski</div><div class="info"><div class="ramal">5231</div><a class="botao" href="tel:5231">Ligar</a></div></div>
-<div class="card"><div class="nome">Larissa Moreira Da Rosa</div><div class="info"><div class="ramal">5292</div><a class="botao" href="tel:5292">Ligar</a></div></div>
-<div class="card"><div class="nome">Laura Marchetto Baptista</div><div class="info"><div class="ramal">5269</div><a class="botao" href="tel:5269">Ligar</a></div></div>
-<div class="card"><div class="nome">Leonardo Arype Reyes</div><div class="info"><div class="ramal">5249</div><a class="botao" href="tel:5249">Ligar</a></div></div>
-<div class="card"><div class="nome">Liandra Dorneles Corrêa</div><div class="info"><div class="ramal">5209</div><a class="botao" href="tel:5209">Ligar</a></div></div>
-<div class="card"><div class="nome">Lidiane Osorio Cardoso Sales</div><div class="info"><div class="ramal">5276</div><a class="botao" href="tel:5276">Ligar</a></div></div>
-
-<!-- SEGUNDA COLUNA (B) -->
-<div class="card"><div class="nome">Livia Prestes</div><div class="info"><div class="ramal">5224</div><a class="botao" href="tel:5224">Ligar</a></div></div>
-<div class="card"><div class="nome">Luana Duarte Junqueira</div><div class="info"><div class="ramal">5281</div><a class="botao" href="tel:5281">Ligar</a></div></div>
-<div class="card"><div class="nome">Ludimila De Farias Pessoa</div><div class="info"><div class="ramal">5279</div><a class="botao" href="tel:5279">Ligar</a></div></div>
-<div class="card"><div class="nome">Luis Felipe Bica Martins</div><div class="info"><div class="ramal">5262</div><a class="botao" href="tel:5262">Ligar</a></div></div>
-<div class="card"><div class="nome">Magnus Afonso Kappenberg</div><div class="info"><div class="ramal">5248</div><a class="botao" href="tel:5248">Ligar</a></div></div>
-<div class="card"><div class="nome">Maiara Chuquel</div><div class="info"><div class="ramal">5258</div><a class="botao" href="tel:5258">Ligar</a></div></div>
-<div class="card"><div class="nome">Marcelo Lipert</div><div class="info"><div class="ramal">5234</div><a class="botao" href="tel:5234">Ligar</a></div></div>
-<div class="card"><div class="nome">Marcia Dos Santos Silva</div><div class="info"><div class="ramal">5232</div><a class="botao" href="tel:5232">Ligar</a></div></div>
-<div class="card"><div class="nome">Mari Rosa Agazzi</div><div class="info"><div class="ramal">5225</div><a class="botao" href="tel:5225">Ligar</a></div></div>
-<div class="card"><div class="nome">Maria Helena Rukat Lima</div><div class="info"><div class="ramal">5212</div><a class="botao" href="tel:5212">Ligar</a></div></div>
-<div class="card"><div class="nome">Mariana Castanheira Fagundes</div><div class="info"><div class="ramal">5220</div><a class="botao" href="tel:5220">Ligar</a></div></div>
-<div class="card"><div class="nome">Marina Da Silva Rodriguez</div><div class="info"><div class="ramal">5211</div><a class="botao" href="tel:5211">Ligar</a></div></div>
-<div class="card"><div class="nome">Marina Zanchy Dal Forno</div><div class="info"><div class="ramal">5229</div><a class="botao" href="tel:5229">Ligar</a></div></div>
-<div class="card"><div class="nome">Martina Isadora Dornelles Vianna</div><div class="info"><div class="ramal">5201</div><a class="botao" href="tel:5201">Ligar</a></div></div>
-<div class="card"><div class="nome">Natália Fraga Dos Santos</div><div class="info"><div class="ramal">5208</div><a class="botao" href="tel:5208">Ligar</a></div></div>
-<div class="card"><div class="nome">Nicolle Gonçalves Dimmer</div><div class="info"><div class="ramal">5277</div><a class="botao" href="tel:5277">Ligar</a></div></div>
-<div class="card"><div class="nome">Pablo Drescher De Castro</div><div class="info"><div class="ramal">5261</div><a class="botao" href="tel:5261">Ligar</a></div></div>
-<div class="card"><div class="nome">Paula Oliveira Paese</div><div class="info"><div class="ramal">5247</div><a class="botao" href="tel:5247">Ligar</a></div></div>
-<div class="card"><div class="nome">Rafael Mello Lopes</div><div class="info"><div class="ramal">5273</div><a class="botao" href="tel:5273">Ligar</a></div></div>
-<div class="card"><div class="nome">Raquel Paese</div><div class="info"><div class="ramal">5285</div><a class="botao" href="tel:5285">Ligar</a></div></div>
-<div class="card"><div class="nome">Recepção 11º Andar</div><div class="info"><div class="ramal">5202</div><a class="botao" href="tel:5202">Ligar</a></div></div>
-<div class="card"><div class="nome">Recepção 6º Andar</div><div class="info"><div class="ramal">5203</div><a class="botao" href="tel:5203">Ligar</a></div></div>
-<div class="card"><div class="nome">Renato Kliemann Paese</div><div class="info"><div class="ramal">5298</div><a class="botao" href="tel:5298">Ligar</a></div></div>
-<div class="card"><div class="nome">Rosana Dos Santos Both</div><div class="info"><div class="ramal">5223</div><a class="botao" href="tel:5223">Ligar</a></div></div>
-<div class="card"><div class="nome">Samara Ferrazza Antonini</div><div class="info"><div class="ramal">5252</div><a class="botao" href="tel:5252">Ligar</a></div></div>
-<div class="card"><div class="nome">Sarah Francieli Mello Weimer</div><div class="info"><div class="ramal">5207</div><a class="botao" href="tel:5207">Ligar</a></div></div>
-<div class="card"><div class="nome">Saulo Oliveira Do Nascimento</div><div class="info"><div class="ramal">5246</div><a class="botao" href="tel:5246">Ligar</a></div></div>
-<div class="card"><div class="nome">Scheilla Bitencort Christiano Setor Atprev</div><div class="info"><div class="ramal">5254</div><a class="botao" href="tel:5254">Ligar</a></div></div>
-<div class="card"><div class="nome">Shayane Barcellos Silveira</div><div class="info"><div class="ramal">5291</div><a class="botao" href="tel:5291">Ligar</a></div></div>
-<div class="card"><div class="nome">Shirlei Gambarra Knak</div><div class="info"><div class="ramal">5286</div><a class="botao" href="tel:5286">Ligar</a></div></div>
-<div class="card"><div class="nome">Silvio Eduardo Fontana Boff</div><div class="info"><div class="ramal">5282</div><a class="botao" href="tel:5282">Ligar</a></div></div>
-<div class="card"><div class="nome">Suelen Da Fonseca Correa</div><div class="info"><div class="ramal">5235</div><a class="botao" href="tel:5235">Ligar</a></div></div>
-<div class="card"><div class="nome">Tamires Dias Quadros</div><div class="info"><div class="ramal">5226</div><a class="botao" href="tel:5226">Ligar</a></div></div>
-<div class="card"><div class="nome">Sala de atendimento 1, 11º andar</div><div class="info"><div class="ramal">5244</div><a class="botao" href="tel:5244">Ligar</a></div></div>
-<div class="card"><div class="nome">Sala de atendimento 2, 11º andar</div><div class="info"><div class="ramal">5270</div><a class="botao" href="tel:5270">Ligar</a></div></div>
-<div class="card"><div class="nome">Sala biblioteca 6º andar</div><div class="info"><div class="ramal">5239</div><a class="botao" href="tel:5239">Ligar</a></div></div>
-<div class="card"><div class="nome">Thamily Diandra Lima Rodrigues</div><div class="info"><div class="ramal">5289</div><a class="botao" href="tel:5289">Ligar</a></div></div>
-<div class="card"><div class="nome">Thiago Cecchini Brunetto</div><div class="info"><div class="ramal">5251</div><a class="botao" href="tel:5251">Ligar</a></div></div>
-<div class="card"><div class="nome">Thomaz Alves Coradini</div><div class="info"><div class="ramal">5260</div><a class="botao" href="tel:5260">Ligar</a></div></div>
-<div class="card"><div class="nome">Tiago Gornicki Schneider</div><div class="info"><div class="ramal">5266</div><a class="botao" href="tel:5266">Ligar</a></div></div>
-<div class="card"><div class="nome">Vago Will</div><div class="info"><div class="ramal">5284</div><a class="botao" href="tel:5284">Ligar</a></div></div>
-<div class="card"><div class="nome">Vandréia Dos S. Chaves Dos Santos</div><div class="info"><div class="ramal">5230</div><a class="botao" href="tel:5230">Ligar</a></div></div>
-<div class="card"><div class="nome">Vanessa Dal Pozzo Da Rosa</div><div class="info"><div class="ramal">5256</div><a class="botao" href="tel:5256">Ligar</a></div></div>
-<div class="card"><div class="nome">Viviane Freitas Da Silva</div><div class="info"><div class="ramal">5255</div><a class="botao" href="tel:5255">Ligar</a></div></div>
-<div class="card"><div class="nome">Werner Da Silveira Rehm</div><div class="info"><div class="ramal">5210</div><a class="botao" href="tel:5210">Ligar</a></div></div>
-<div class="card"><div class="nome">William Rossato Bernardo</div><div class="info"><div class="ramal">5257</div><a class="botao" href="tel:5257">Ligar</a></div></div>
+<div class="card"><span class="nome">Adriana Fraga Dos Santos</span><span class="ramal">5274</span></div>
+<div class="card"><span class="nome">Livia Prestes</span><span class="ramal">5224</span></div>
+<div class="card"><span class="nome">Aline Panizzutti</span><span class="ramal">5222</span></div>
+<div class="card"><span class="nome">Luana Duarte Junqueira</span><span class="ramal">5281</span></div>
+<div class="card"><span class="nome">Ana Carolina Silva Da Silva</span><span class="ramal">5215</span></div>
+<div class="card"><span class="nome">Ludimila De Farias Pessoa</span><span class="ramal">5279</span></div>
+<div class="card"><span class="nome">Ana Karolina Ferreira Witt</span><span class="ramal">5227</span></div>
+<div class="card"><span class="nome">Luis Felipe Bica Martins</span><span class="ramal">5262</span></div>
+<div class="card"><span class="nome">Ana Paula Carvalho</span><span class="ramal">5221</span></div>
+<div class="card"><span class="nome">Magnus Afonso Kappenberg</span><span class="ramal">5248</span></div>
+<div class="card"><span class="nome">Angelina Ines Castro Mattia</span><span class="ramal">5275</span></div>
+<div class="card"><span class="nome">Maiara Chuquel</span><span class="ramal">5258</span></div>
+<div class="card"><span class="nome">Bárbara Petersen Rosa Raphaelli</span><span class="ramal">5332</span></div>
+<div class="card"><span class="nome">Brenda Silveira Acosta</span><span class="ramal">5263</span></div>
+<div class="card"><span class="nome">Brenda Wetter Ipe Da Silva</span><span class="ramal">5267</span></div>
+<div class="card"><span class="nome">Bruno Mezzomo Da Silva</span><span class="ramal">5245</span></div>
+<div class="card"><span class="nome">Camila Ferraz Ferreira</span><span class="ramal">5242</span></div>
+<div class="card"><span class="nome">Camila Schwambach Azevedo</span><span class="ramal">5283</span></div>
+<div class="card"><span class="nome">Caroline Schonhofen da Rosa</span><span class="ramal">5284</span></div>
+<div class="card"><span class="nome">Cinthia Dos Santos Rodrigues</span><span class="ramal">5268</span></div>
+<div class="card"><span class="nome">Cristiano Ohlweiler Ferreira</span><span class="ramal">5250</span></div>
+<div class="card"><span class="nome">David Da Costa Lopes</span><span class="ramal">5240</span></div>
+<div class="card"><span class="nome">Débora Torbis Rocha</span><span class="ramal">5295</span></div>
+<div class="card"><span class="nome">Drieze Prado Silva</span><span class="ramal">5288</span></div>
+<div class="card"><span class="nome">Elisa Torelly</span><span class="ramal">5228</span></div>
+<div class="card"><span class="nome">Emmanuel Frias Sampaio</span><span class="ramal">5236</span></div>
+<div class="card"><span class="nome">Enimara Marques Pereira</span><span class="ramal">5294</span></div>
+<div class="card"><span class="nome">Eric Tempass Hafemeister</span><span class="ramal">5280</span></div>
+<div class="card"><span class="nome">Fabiana Dos Santos Da Silva</span><span class="ramal">5253</span></div>
+<div class="card"><span class="nome">Fabiana Ferreira Da Silva</span><span class="ramal">5237</span></div>
+<div class="card"><span class="nome">Fabiana Ramos Zwiernik</span><span class="ramal">5213</span></div>
+<div class="card"><span class="nome">Fabiane Batisti</span><span class="ramal">5290</span></div>
+<div class="card"><span class="nome">Fabricio Brum Dos Santos</span><span class="ramal">5296</span></div>
+<div class="card"><span class="nome">Felipe Kliemann de Oliveira</span><span class="ramal">5304</span></div>
+<div class="card"><span class="nome">Fernanda Palombini Moralles</span><span class="ramal">5241</span></div>
+<div class="card"><span class="nome">Gabriel Angelo Hadad</span><span class="ramal">5271</span></div>
+<div class="card"><span class="nome">Geniane Ramos Aguette</span><span class="ramal">5238</span></div>
+<div class="card"><span class="nome">Glênio Luis Ohlweiler Ferreira</span><span class="ramal">5243</span></div>
+<div class="card"><span class="nome">Guilherme Dresch Da Silveira Jacques</span><span class="ramal">5287</span></div>
+<div class="card"><span class="nome">Ingrid Renz Birnfeld</span><span class="ramal">5219</span></div>
+<div class="card"><span class="nome">Jaqueline Cristiane Gotz</span><span class="ramal">5259</span></div>
+<div class="card"><span class="nome">Jean Carlo Dickel Bilhar</span><span class="ramal">5204</span></div>
+<div class="card"><span class="nome">Jenifer Michele Fulber Corrêa Da Silva</span><span class="ramal">5205</span></div>
+<div class="card"><span class="nome">Jéssica Thais Herrera</span><span class="ramal">5216</span></div>
+<div class="card"><span class="nome">Joao Francisco Viegas</span><span class="ramal">5214</span></div>
+<div class="card"><span class="nome">João Paulo Alves De Lima</span><span class="ramal">5293</span></div>
+<div class="card"><span class="nome">Kelly De Cassia Vaxilevski</span><span class="ramal">5231</span></div>
+<div class="card"><span class="nome">Larissa Moreira Da Rosa</span><span class="ramal">5292</span></div>
+<div class="card"><span class="nome">Laura Marchetto Baptista</span><span class="ramal">5269</span></div>
+<div class="card"><span class="nome">Leonardo Arype Reyes</span><span class="ramal">5249</span></div>
+<div class="card"><span class="nome">Liandra Dorneles Corrêa</span><span class="ramal">5209</span></div>
+<div class="card"><span class="nome">Lidiane Osorio Cardoso Sales</span><span class="ramal">5276</span></div>
+<div class="card"><span class="nome">Marcelo Lipert</span><span class="ramal">5234</span></div>
+<div class="card"><span class="nome">Marcia Dos Santos Silva</span><span class="ramal">5232</span></div>
+<div class="card"><span class="nome">Mari Rosa Agazzi</span><span class="ramal">5225</span></div>
+<div class="card"><span class="nome">Maria Helena Rukat Lima</span><span class="ramal">5212</span></div>
+<div class="card"><span class="nome">Mariana Castanheira Fagundes</span><span class="ramal">5220</span></div>
+<div class="card"><span class="nome">Marina Da Silva Rodriguez</span><span class="ramal">5211</span></div>
+<div class="card"><span class="nome">Marina Zanchy Dal Forno</span><span class="ramal">5229</span></div>
+<div class="card"><span class="nome">Martina Isadora Dornelles Vianna</span><span class="ramal">5201</span></div>
+<div class="card"><span class="nome">Natália Fraga Dos Santos</span><span class="ramal">5208</span></div>
+<div class="card"><span class="nome">Nicolle Gonçalves Dimmer</span><span class="ramal">5277</span></div>
+<div class="card"><span class="nome">Pablo Drescher De Castro</span><span class="ramal">5261</span></div>
+<div class="card"><span class="nome">Paula Oliveira Paese</span><span class="ramal">5247</span></div>
+<div class="card"><span class="nome">Rafael Mello Lopes</span><span class="ramal">5273</span></div>
+<div class="card"><span class="nome">Raquel Paese</span><span class="ramal">5285</span></div>
+<div class="card"><span class="nome">Recepção 11º Andar</span><span class="ramal">5202</span></div>
+<div class="card"><span class="nome">Recepção 6º Andar</span><span class="ramal">5203</span></div>
+<div class="card"><span class="nome">Renato Kliemann Paese</span><span class="ramal">5298</span></div>
+<div class="card"><span class="nome">Rosana Dos Santos Both</span><span class="ramal">5223</span></div>
+<div class="card"><span class="nome">Samara Ferrazza Antonini</span><span class="ramal">5252</span></div>
+<div class="card"><span class="nome">Sarah Francieli Mello Weimer</span><span class="ramal">5207</span></div>
+<div class="card"><span class="nome">Saulo Oliveira Do Nascimento</span><span class="ramal">5246</span></div>
+<div class="card"><span class="nome">Scheilla Bitencort Christiano Setor Atprev</span><span class="ramal">5254</span></div>
+<div class="card"><span class="nome">Shayane Barcellos Silveira</span><span class="ramal">5291</span></div>
+<div class="card"><span class="nome">Shirlei Gambarra Knak</span><span class="ramal">5286</span></div>
+<div class="card"><span class="nome">Silvio Eduardo Fontana Boff</span><span class="ramal">5282</span></div>
+<div class="card"><span class="nome">Suelen Da Fonseca Correa</span><span class="ramal">5235</span></div>
+<div class="card"><span class="nome">Tamires Dias Quadros</span><span class="ramal">5226</span></div>
+<div class="card"><span class="nome">Sala de atendimento 1, 11º andar</span><span class="ramal">5244</span></div>
+<div class="card"><span class="nome">Sala de atendimento 2, 11º andar</span><span class="ramal">5270</span></div>
+<div class="card"><span class="nome">Sala biblioteca 6º andar</span><span class="ramal">5239</span></div>
+<div class="card"><span class="nome">Thamily Diandra Lima Rodrigues</span><span class="ramal">5289</span></div>
+<div class="card"><span class="nome">Thiago Cecchini Brunetto</span><span class="ramal">5251</span></div>
+<div class="card"><span class="nome">Thomaz Alves Coradini</span><span class="ramal">5260</span></div>
+<div class="card"><span class="nome">Tiago Gornicki Schneider</span><span class="ramal">5266</span></div>
+<div class="card"><span class="nome">Vago Will</span><span class="ramal">5284</span></div>
+<div class="card"><span class="nome">Vandréia Dos S. Chaves Dos Santos</span><span class="ramal">5230</span></div>
+<div class="card"><span class="nome">Vanessa Dal Pozzo Da Rosa</span><span class="ramal">5256</span></div>
+<div class="card"><span class="nome">Viviane Freitas Da Silva</span><span class="ramal">5255</span></div>
+<div class="card"><span class="nome">Werner Da Silveira Rehm</span><span class="ramal">5210</span></div>
+<div class="card"><span class="nome">William Rossato Bernardo</span><span class="ramal">5257</span></div>
 
 </div>
 
