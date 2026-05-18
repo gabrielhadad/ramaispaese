@@ -23,6 +23,13 @@ body{
     text-align:center;
     font-size:38px;
     font-weight:700;
+    margin-bottom:5px;
+}
+
+.subtitulo{
+    text-align:center;
+    font-size:16px;
+    color:#475569;
     margin-bottom:25px;
 }
 
@@ -44,7 +51,7 @@ body{
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(380px,1fr));
     gap:16px;
 }
 
@@ -55,9 +62,6 @@ body{
     box-shadow:0 4px 12px rgba(0,0,0,0.05);
     transition:0.2s ease;
     border:1px solid #e2e8f0;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
 }
 
 .card:hover{
@@ -67,15 +71,43 @@ body{
 
 .nome{
     font-size:17px;
-    font-weight:600;
+    font-weight:700;
     color:#0f172a;
+    margin-bottom:12px;
+    border-bottom:2px solid #e2e8f0;
+    padding-bottom:8px;
 }
 
-.ramal{
-    font-size:26px;
+.ramais{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.ramal-item{
+    background:#f1f5f9;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+.ramal-tipo{
+    font-weight:600;
+    color:#475569;
+}
+
+.ramal-numero{
     font-weight:700;
     color:#2563eb;
+    font-size:18px;
+    margin-left:6px;
     font-family:'Courier New', monospace;
+}
+
+.sem-info{
+    color:#94a3b8;
+    font-style:italic;
+    font-size:14px;
 }
 
 @media(max-width:600px){
@@ -85,10 +117,8 @@ body{
     .titulo{
         font-size:28px;
     }
-    .card{
-        flex-direction:column;
-        align-items:flex-start;
-        gap:10px;
+    .grid{
+        grid-template-columns:1fr;
     }
 }
 </style>
@@ -99,103 +129,848 @@ body{
 <div class="container">
 
 <h1 class="titulo">📞 Lista de Ramais</h1>
+<div class="subtitulo">SIP | IP | WEB</div>
 
 <input type="text" class="pesquisa" id="pesquisa" placeholder="Pesquisar nome ou ramal..." onkeyup="filtrarRamais()">
 
 <div class="grid" id="listaRamais">
+    <!-- Adriana Santos -->
+    <div class="card">
+        <div class="nome">Adriana Santos</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5233</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">IP:</span><span class="ramal-numero">5274</span></div>
+        </div>
+    </div>
 
-<div class="card"><span class="nome">Adriana Fraga Dos Santos</span><span class="ramal">5274</span></div>
-<div class="card"><span class="nome">Livia Prestes</span><span class="ramal">5224</span></div>
-<div class="card"><span class="nome">Aline Panizzutti</span><span class="ramal">5222</span></div>
-<div class="card"><span class="nome">Luana Duarte Junqueira</span><span class="ramal">5281</span></div>
-<div class="card"><span class="nome">Ana Carolina Silva Da Silva</span><span class="ramal">5215</span></div>
-<div class="card"><span class="nome">Ludimila De Farias Pessoa</span><span class="ramal">5279</span></div>
-<div class="card"><span class="nome">Ana Karolina Ferreira Witt</span><span class="ramal">5227</span></div>
-<div class="card"><span class="nome">Luis Felipe Bica Martins</span><span class="ramal">5262</span></div>
-<div class="card"><span class="nome">Ana Paula Carvalho</span><span class="ramal">5221</span></div>
-<div class="card"><span class="nome">Magnus Afonso Kappenberg</span><span class="ramal">5248</span></div>
-<div class="card"><span class="nome">Angelina Ines Castro Mattia</span><span class="ramal">5275</span></div>
-<div class="card"><span class="nome">Maiara Chuquel</span><span class="ramal">5258</span></div>
-<div class="card"><span class="nome">Bárbara Petersen Rosa Raphaelli</span><span class="ramal">5332</span></div>
-<div class="card"><span class="nome">Brenda Silveira Acosta</span><span class="ramal">5263</span></div>
-<div class="card"><span class="nome">Brenda Wetter Ipe Da Silva</span><span class="ramal">5267</span></div>
-<div class="card"><span class="nome">Bruno Mezzomo Da Silva</span><span class="ramal">5245</span></div>
-<div class="card"><span class="nome">Camila Ferraz Ferreira</span><span class="ramal">5242</span></div>
-<div class="card"><span class="nome">Camila Schwambach Azevedo</span><span class="ramal">5283</span></div>
-<div class="card"><span class="nome">Caroline Schonhofen da Rosa</span><span class="ramal">5284</span></div>
-<div class="card"><span class="nome">Cinthia Dos Santos Rodrigues</span><span class="ramal">5268</span></div>
-<div class="card"><span class="nome">Cristiano Ohlweiler Ferreira</span><span class="ramal">5250</span></div>
-<div class="card"><span class="nome">David Da Costa Lopes</span><span class="ramal">5240</span></div>
-<div class="card"><span class="nome">Débora Torbis Rocha</span><span class="ramal">5295</span></div>
-<div class="card"><span class="nome">Drieze Prado Silva</span><span class="ramal">5288</span></div>
-<div class="card"><span class="nome">Elisa Torelly</span><span class="ramal">5228</span></div>
-<div class="card"><span class="nome">Emmanuel Frias Sampaio</span><span class="ramal">5236</span></div>
-<div class="card"><span class="nome">Enimara Marques Pereira</span><span class="ramal">5294</span></div>
-<div class="card"><span class="nome">Eric Tempass Hafemeister</span><span class="ramal">5280</span></div>
-<div class="card"><span class="nome">Fabiana Dos Santos Da Silva</span><span class="ramal">5253</span></div>
-<div class="card"><span class="nome">Fabiana Ferreira Da Silva</span><span class="ramal">5237</span></div>
-<div class="card"><span class="nome">Fabiana Ramos Zwiernik</span><span class="ramal">5213</span></div>
-<div class="card"><span class="nome">Fabiane Batisti</span><span class="ramal">5290</span></div>
-<div class="card"><span class="nome">Fabricio Brum Dos Santos</span><span class="ramal">5296</span></div>
-<div class="card"><span class="nome">Felipe Kliemann de Oliveira</span><span class="ramal">5304</span></div>
-<div class="card"><span class="nome">Fernanda Palombini Moralles</span><span class="ramal">5241</span></div>
-<div class="card"><span class="nome">Gabriel Angelo Hadad</span><span class="ramal">5271</span></div>
-<div class="card"><span class="nome">Geniane Ramos Aguette</span><span class="ramal">5238</span></div>
-<div class="card"><span class="nome">Glênio Luis Ohlweiler Ferreira</span><span class="ramal">5243</span></div>
-<div class="card"><span class="nome">Guilherme Dresch Da Silveira Jacques</span><span class="ramal">5287</span></div>
-<div class="card"><span class="nome">Ingrid Renz Birnfeld</span><span class="ramal">5219</span></div>
-<div class="card"><span class="nome">Jaqueline Cristiane Gotz</span><span class="ramal">5259</span></div>
-<div class="card"><span class="nome">Jean Carlo Dickel Bilhar</span><span class="ramal">5204</span></div>
-<div class="card"><span class="nome">Jenifer Michele Fulber Corrêa Da Silva</span><span class="ramal">5205</span></div>
-<div class="card"><span class="nome">Jéssica Thais Herrera</span><span class="ramal">5216</span></div>
-<div class="card"><span class="nome">Joao Francisco Viegas</span><span class="ramal">5214</span></div>
-<div class="card"><span class="nome">João Paulo Alves De Lima</span><span class="ramal">5293</span></div>
-<div class="card"><span class="nome">Kelly De Cassia Vaxilevski</span><span class="ramal">5231</span></div>
-<div class="card"><span class="nome">Larissa Moreira Da Rosa</span><span class="ramal">5292</span></div>
-<div class="card"><span class="nome">Laura Marchetto Baptista</span><span class="ramal">5269</span></div>
-<div class="card"><span class="nome">Leonardo Arype Reyes</span><span class="ramal">5249</span></div>
-<div class="card"><span class="nome">Liandra Dorneles Corrêa</span><span class="ramal">5209</span></div>
-<div class="card"><span class="nome">Lidiane Osorio Cardoso Sales</span><span class="ramal">5276</span></div>
-<div class="card"><span class="nome">Marcelo Lipert</span><span class="ramal">5234</span></div>
-<div class="card"><span class="nome">Marcia Dos Santos Silva</span><span class="ramal">5232</span></div>
-<div class="card"><span class="nome">Mari Rosa Agazzi</span><span class="ramal">5225</span></div>
-<div class="card"><span class="nome">Maria Helena Rukat Lima</span><span class="ramal">5212</span></div>
-<div class="card"><span class="nome">Mariana Castanheira Fagundes</span><span class="ramal">5220</span></div>
-<div class="card"><span class="nome">Marina Da Silva Rodriguez</span><span class="ramal">5211</span></div>
-<div class="card"><span class="nome">Marina Zanchy Dal Forno</span><span class="ramal">5229</span></div>
-<div class="card"><span class="nome">Martina Isadora Dornelles Vianna</span><span class="ramal">5201</span></div>
-<div class="card"><span class="nome">Natália Fraga Dos Santos</span><span class="ramal">5208</span></div>
-<div class="card"><span class="nome">Nicolle Gonçalves Dimmer</span><span class="ramal">5277</span></div>
-<div class="card"><span class="nome">Pablo Drescher De Castro</span><span class="ramal">5261</span></div>
-<div class="card"><span class="nome">Paula Oliveira Paese</span><span class="ramal">5247</span></div>
-<div class="card"><span class="nome">Rafael Mello Lopes</span><span class="ramal">5273</span></div>
-<div class="card"><span class="nome">Raquel Paese</span><span class="ramal">5285</span></div>
-<div class="card"><span class="nome">Recepção 11º Andar</span><span class="ramal">5202</span></div>
-<div class="card"><span class="nome">Recepção 6º Andar</span><span class="ramal">5203</span></div>
-<div class="card"><span class="nome">Renato Kliemann Paese</span><span class="ramal">5298</span></div>
-<div class="card"><span class="nome">Rosana Dos Santos Both</span><span class="ramal">5223</span></div>
-<div class="card"><span class="nome">Samara Ferrazza Antonini</span><span class="ramal">5252</span></div>
-<div class="card"><span class="nome">Sarah Francieli Mello Weimer</span><span class="ramal">5207</span></div>
-<div class="card"><span class="nome">Saulo Oliveira Do Nascimento</span><span class="ramal">5246</span></div>
-<div class="card"><span class="nome">Scheilla Bitencort Christiano Setor Atprev</span><span class="ramal">5254</span></div>
-<div class="card"><span class="nome">Shayane Barcellos Silveira</span><span class="ramal">5291</span></div>
-<div class="card"><span class="nome">Shirlei Gambarra Knak</span><span class="ramal">5286</span></div>
-<div class="card"><span class="nome">Silvio Eduardo Fontana Boff</span><span class="ramal">5282</span></div>
-<div class="card"><span class="nome">Suelen Da Fonseca Correa</span><span class="ramal">5235</span></div>
-<div class="card"><span class="nome">Tamires Dias Quadros</span><span class="ramal">5226</span></div>
-<div class="card"><span class="nome">Sala de atendimento 1, 11º andar</span><span class="ramal">5244</span></div>
-<div class="card"><span class="nome">Sala de atendimento 2, 11º andar</span><span class="ramal">5270</span></div>
-<div class="card"><span class="nome">Sala biblioteca 6º andar</span><span class="ramal">5239</span></div>
-<div class="card"><span class="nome">Thamily Diandra Lima Rodrigues</span><span class="ramal">5289</span></div>
-<div class="card"><span class="nome">Thiago Cecchini Brunetto</span><span class="ramal">5251</span></div>
-<div class="card"><span class="nome">Thomaz Alves Coradini</span><span class="ramal">5260</span></div>
-<div class="card"><span class="nome">Tiago Gornicki Schneider</span><span class="ramal">5266</span></div>
-<div class="card"><span class="nome">Vago Will</span><span class="ramal">5284</span></div>
-<div class="card"><span class="nome">Vandréia Dos S. Chaves Dos Santos</span><span class="ramal">5230</span></div>
-<div class="card"><span class="nome">Vanessa Dal Pozzo Da Rosa</span><span class="ramal">5256</span></div>
-<div class="card"><span class="nome">Viviane Freitas Da Silva</span><span class="ramal">5255</span></div>
-<div class="card"><span class="nome">Werner Da Silveira Rehm</span><span class="ramal">5210</span></div>
-<div class="card"><span class="nome">William Rossato Bernardo</span><span class="ramal">5257</span></div>
+    <!-- Aline Rennhack Panizzutti -->
+    <div class="card">
+        <div class="nome">Aline Rennhack Panizzutti</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5222</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5324</span></div>
+        </div>
+    </div>
+
+    <!-- Ana Paula Carvalho -->
+    <div class="card">
+        <div class="nome">Ana Paula Carvalho</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5221</span></div>
+        </div>
+    </div>
+
+    <!-- Ana Paula Carvalho Cardoso -->
+    <div class="card">
+        <div class="nome">Ana Paula Carvalho Cardoso</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5229</span></div>
+        </div>
+    </div>
+
+    <!-- Angelina Inês Castro Mattia -->
+    <div class="card">
+        <div class="nome">Angelina Inês Castro Mattia</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5275</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5375</span></div>
+        </div>
+    </div>
+
+    <!-- Áurea Júlia Braga Rodrigues -->
+    <div class="card">
+        <div class="nome">Áurea Júlia Braga Rodrigues</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5301</span></div>
+        </div>
+    </div>
+
+    <!-- Bárbara Petersen Rosa Raphaelli -->
+    <div class="card">
+        <div class="nome">Bárbara Petersen Rosa Raphaelli</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5332</span></div>
+        </div>
+    </div>
+
+    <!-- Barbara Vuelma Gucciardo -->
+    <div class="card">
+        <div class="nome">Barbara Vuelma Gucciardo</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">IP:</span><span class="ramal-numero">5208</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5308</span></div>
+        </div>
+    </div>
+
+    <!-- Brenda Silveira Acosta -->
+    <div class="card">
+        <div class="nome">Brenda Silveira Acosta</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5263</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5363</span></div>
+        </div>
+    </div>
+
+    <!-- Brenda Stephany Soares Xavier -->
+    <div class="card">
+        <div class="nome">Brenda Stephany Soares Xavier</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5303</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5403</span></div>
+        </div>
+    </div>
+
+    <!-- Brenda Wetter Ipé da Silva -->
+    <div class="card">
+        <div class="nome">Brenda Wetter Ipé da Silva</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5267</span></div>
+        </div>
+    </div>
+
+    <!-- Bruna Gomes Borges -->
+    <div class="card">
+        <div class="nome">Bruna Gomes Borges</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5209</span></div>
+        </div>
+    </div>
+
+    <!-- Bruno Carneiro dos Santos -->
+    <div class="card">
+        <div class="nome">Bruno Carneiro dos Santos</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5216</span></div>
+        </div>
+    </div>
+
+    <!-- Bruno Mezzomo da Silva -->
+    <div class="card">
+        <div class="nome">Bruno Mezzomo da Silva</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5245</span></div>
+        </div>
+    </div>
+
+    <!-- Camila Ferraz Ferreira -->
+    <div class="card">
+        <div class="nome">Camila Ferraz Ferreira</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5242</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5342</span></div>
+        </div>
+    </div>
+
+    <!-- Camila Schwambach Azevedo -->
+    <div class="card">
+        <div class="nome">Camila Schwambach Azevedo</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5283</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5383</span></div>
+        </div>
+    </div>
+
+    <!-- Carleonarda Neutzling -->
+    <div class="card">
+        <div class="nome">Carleonarda Neutzling</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5231</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5331</span></div>
+        </div>
+    </div>
+
+    <!-- Carlos Eduardo dos Santos Vidal -->
+    <div class="card">
+        <div class="nome">Carlos Eduardo dos Santos Vidal</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5220</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5320</span></div>
+        </div>
+    </div>
+
+    <!-- Carmen Lucia Godoi Saldanha -->
+    <div class="card">
+        <div class="nome">Carmen Lucia Godoi Saldanha</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5238</span></div>
+        </div>
+    </div>
+
+    <!-- Caroline Schonhofen da Rosa -->
+    <div class="card">
+        <div class="nome">Caroline Schonhofen da Rosa</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5284</span></div>
+        </div>
+    </div>
+
+    <!-- Cínthia dos Santos Rodrigues -->
+    <div class="card">
+        <div class="nome">Cínthia dos Santos Rodrigues</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5268</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5368</span></div>
+        </div>
+    </div>
+
+    <!-- Cristiano Ohlweiler Ferreira -->
+    <div class="card">
+        <div class="nome">Cristiano Ohlweiler Ferreira</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5250</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5350</span></div>
+        </div>
+    </div>
+
+    <!-- Cristiele Coelho -->
+    <div class="card">
+        <div class="nome">Cristiele Coelho</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5217</span></div>
+        </div>
+    </div>
+
+    <!-- David Da Costa Lopes -->
+    <div class="card">
+        <div class="nome">David Da Costa Lopes</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5240</span></div>
+        </div>
+    </div>
+
+    <!-- Débora Torbis Rocha -->
+    <div class="card">
+        <div class="nome">Débora Torbis Rocha</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5295</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5395</span></div>
+        </div>
+    </div>
+
+    <!-- Drieze Prado Silva -->
+    <div class="card">
+        <div class="nome">Drieze Prado Silva</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5288</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5388</span></div>
+        </div>
+    </div>
+
+    <!-- Elisa Torelly -->
+    <div class="card">
+        <div class="nome">Elisa Torelly</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5228</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5328</span></div>
+        </div>
+    </div>
+
+    <!-- Emmanuel Frias Sampaio -->
+    <div class="card">
+        <div class="nome">Emmanuel Frias Sampaio</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5236</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5336</span></div>
+        </div>
+    </div>
+
+    <!-- Enimara Marques Pereira -->
+    <div class="card">
+        <div class="nome">Enimara Marques Pereira</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5294</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5299</span></div>
+        </div>
+    </div>
+
+    <!-- Fabiana Ferreira da Silva -->
+    <div class="card">
+        <div class="nome">Fabiana Ferreira da Silva</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5237</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5337</span></div>
+        </div>
+    </div>
+
+    <!-- Fabiana Ramos Zwiernik -->
+    <div class="card">
+        <div class="nome">Fabiana Ramos Zwiernik</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5213</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5313</span></div>
+        </div>
+    </div>
+
+    <!-- Fabiane Batisti -->
+    <div class="card">
+        <div class="nome">Fabiane Batisti</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5290</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5390</span></div>
+        </div>
+    </div>
+
+    <!-- Fabrício Brum dos Santos -->
+    <div class="card">
+        <div class="nome">Fabrício Brum dos Santos</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5296</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5396</span></div>
+        </div>
+    </div>
+
+    <!-- Felipe Kliemann de Oliveira -->
+    <div class="card">
+        <div class="nome">Felipe Kliemann de Oliveira</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5304</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5404</span></div>
+        </div>
+    </div>
+
+    <!-- Fernanda Palombini Moralles -->
+    <div class="card">
+        <div class="nome">Fernanda Palombini Moralles</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5241</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5341</span></div>
+        </div>
+    </div>
+
+    <!-- Gabriel Angelo Hadad -->
+    <div class="card">
+        <div class="nome">Gabriel Angelo Hadad</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5271</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5371</span></div>
+        </div>
+    </div>
+
+    <!-- Glênio Ohlweiler Ferreira -->
+    <div class="card">
+        <div class="nome">Glênio Ohlweiler Ferreira</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5243</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5343</span></div>
+        </div>
+    </div>
+
+    <!-- Guilherme Dresch da Silveira -->
+    <div class="card">
+        <div class="nome">Guilherme Dresch da Silveira</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5287</span></div>
+        </div>
+    </div>
+
+    <!-- Helena Valiente Alves Ribeiro -->
+    <div class="card">
+        <div class="nome">Helena Valiente Alves Ribeiro</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5227</span></div>
+        </div>
+    </div>
+
+    <!-- Ingrid Renz Birnfeld -->
+    <div class="card">
+        <div class="nome">Ingrid Renz Birnfeld</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5219</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5319</span></div>
+        </div>
+    </div>
+
+    <!-- Jaqueline Cristiane Gotz -->
+    <div class="card">
+        <div class="nome">Jaqueline Cristiane Gotz</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5259</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5359</span></div>
+        </div>
+    </div>
+
+    <!-- Jean Carlo Dickel Bilhar -->
+    <div class="card">
+        <div class="nome">Jean Carlo Dickel Bilhar</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5204</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5404</span></div>
+        </div>
+    </div>
+
+    <!-- Jessica Adriana da Cunha Albernais -->
+    <div class="card">
+        <div class="nome">Jessica Adriana da Cunha Albernais</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5239</span></div>
+        </div>
+    </div>
+
+    <!-- João Francisco Viegas -->
+    <div class="card">
+        <div class="nome">João Francisco Viegas</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5214</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5314</span></div>
+        </div>
+    </div>
+
+    <!-- João Paulo Alves de Lima -->
+    <div class="card">
+        <div class="nome">João Paulo Alves de Lima</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5293</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5393</span></div>
+        </div>
+    </div>
+
+    <!-- Karimy Fagundes Teixeira -->
+    <div class="card">
+        <div class="nome">Karimy Fagundes Teixeira</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5272</span></div>
+        </div>
+    </div>
+
+    <!-- Larissa Moreira da Rosa -->
+    <div class="card">
+        <div class="nome">Larissa Moreira da Rosa</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5292</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5392</span></div>
+        </div>
+    </div>
+
+    <!-- Laura Saraiva Wieser -->
+    <div class="card">
+        <div class="nome">Laura Saraiva Wieser</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5269</span></div>
+        </div>
+    </div>
+
+    <!-- Laura Marchetto Baptista -->
+    <div class="card">
+        <div class="nome">Laura Marchetto Baptista</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5205</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5405</span></div>
+        </div>
+    </div>
+
+    <!-- Lidiane Osorio Cardoso Sales -->
+    <div class="card">
+        <div class="nome">Lidiane Osorio Cardoso Sales</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5276</span></div>
+        </div>
+    </div>
+
+    <!-- Livia Prestes -->
+    <div class="card">
+        <div class="nome">Livia Prestes</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5224</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5324</span></div>
+        </div>
+    </div>
+
+    <!-- Luana Duarte Junqueira -->
+    <div class="card">
+        <div class="nome">Luana Duarte Junqueira</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5281</span></div>
+        </div>
+    </div>
+
+    <!-- Ludimila de Farias Pessoa -->
+    <div class="card">
+        <div class="nome">Ludimila de Farias Pessoa</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5279</span></div>
+        </div>
+    </div>
+
+    <!-- Luis Felipe Bica Martins -->
+    <div class="card">
+        <div class="nome">Luis Felipe Bica Martins</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5262</span></div>
+        </div>
+    </div>
+
+    <!-- Luisa da Cruz Wendorff -->
+    <div class="card">
+        <div class="nome">Luisa da Cruz Wendorff</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5302</span></div>
+        </div>
+    </div>
+
+    <!-- Luiza Costa de Medeiros Werner -->
+    <div class="card">
+        <div class="nome">Luiza Costa de Medeiros Werner</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">IP:</span><span class="ramal-numero">5206</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5306</span></div>
+        </div>
+    </div>
+
+    <!-- Magnus Afonso Kappenberg -->
+    <div class="card">
+        <div class="nome">Magnus Afonso Kappenberg</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5248</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5348</span></div>
+        </div>
+    </div>
+
+    <!-- Maiara Chuquel -->
+    <div class="card">
+        <div class="nome">Maiara Chuquel</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5258</span></div>
+        </div>
+    </div>
+
+    <!-- Marcelo Lipert -->
+    <div class="card">
+        <div class="nome">Marcelo Lipert</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5234</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5334</span></div>
+        </div>
+    </div>
+
+    <!-- Marcia dos Santos Silva -->
+    <div class="card">
+        <div class="nome">Marcia dos Santos Silva</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5232</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5432</span></div>
+        </div>
+    </div>
+
+    <!-- Marí Rosa Agazzi -->
+    <div class="card">
+        <div class="nome">Marí Rosa Agazzi</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5225</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5325</span></div>
+        </div>
+    </div>
+
+    <!-- Maria Helena Rukat Lima -->
+    <div class="card">
+        <div class="nome">Maria Helena Rukat Lima</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5212</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5312</span></div>
+        </div>
+    </div>
+
+    <!-- Marina da Silva Rodriguez -->
+    <div class="card">
+        <div class="nome">Marina da Silva Rodriguez</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5211</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5311</span></div>
+        </div>
+    </div>
+
+    <!-- Martina Isadora Dornelles Vianna -->
+    <div class="card">
+        <div class="nome">Martina Isadora Dornelles Vianna</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5201</span></div>
+        </div>
+    </div>
+
+    <!-- Moara Curubeto Lona de Miranda -->
+    <div class="card">
+        <div class="nome">Moara Curubeto Lona de Miranda</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5218</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5318</span></div>
+        </div>
+    </div>
+
+    <!-- Nicolle Goncalves Dimmer -->
+    <div class="card">
+        <div class="nome">Nicolle Goncalves Dimmer</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5277</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5377</span></div>
+        </div>
+    </div>
+
+    <!-- Pablo Drescher de Castro -->
+    <div class="card">
+        <div class="nome">Pablo Drescher de Castro</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP
+                            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5261</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5361</span></div>
+        </div>
+    </div>
+
+    <!-- Paula Oliveira Paese -->
+    <div class="card">
+        <div class="nome">Paula Oliveira Paese</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5247</span></div>
+        </div>
+    </div>
+
+    <!-- Rafael Mello Lopes -->
+    <div class="card">
+        <div class="nome">Rafael Mello Lopes</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5273</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5373</span></div>
+        </div>
+    </div>
+
+    <!-- Raquel Paese -->
+    <div class="card">
+        <div class="nome">Raquel Paese</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5285</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5385</span></div>
+        </div>
+    </div>
+
+    <!-- Recepção 11 Andar -->
+    <div class="card">
+        <div class="nome">Recepção 11 Andar</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5202</span></div>
+        </div>
+    </div>
+
+    <!-- Recepção 6 Andar -->
+    <div class="card">
+        <div class="nome">Recepção 6 Andar</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5203</span></div>
+        </div>
+    </div>
+
+    <!-- Renato Kliemann Paese -->
+    <div class="card">
+        <div class="nome">Renato Kliemann Paese</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5298</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5398</span></div>
+        </div>
+    </div>
+
+    <!-- Rosana dos Santos Both -->
+    <div class="card">
+        <div class="nome">Rosana dos Santos Both</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5223</span></div>
+        </div>
+    </div>
+
+    <!-- Sala de atendimento 1 - 11 Andar -->
+    <div class="card">
+        <div class="nome">Sala de atendimento 1 - 11 Andar</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5244</span></div>
+        </div>
+    </div>
+
+    <!-- Sala de atendimento 2 - 11 Andar -->
+    <div class="card">
+        <div class="nome">Sala de atendimento 2 - 11 Andar</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5270</span></div>
+        </div>
+    </div>
+
+    <!-- Samara Ferrazza -->
+    <div class="card">
+        <div class="nome">Samara Ferrazza</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5252</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5352</span></div>
+        </div>
+    </div>
+
+    <!-- Sarah Franciele Mello Weimer -->
+    <div class="card">
+        <div class="nome">Sarah Franciele Mello Weimer</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5207</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5307</span></div>
+        </div>
+    </div>
+
+    <!-- Saulo Nascimento -->
+    <div class="card">
+        <div class="nome">Saulo Nascimento</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5246</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5346</span></div>
+        </div>
+    </div>
+
+    <!-- Scheilla Bitencort Christiano -->
+    <div class="card">
+        <div class="nome">Scheilla Bitencort Christiano</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5254</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5354</span></div>
+        </div>
+    </div>
+
+    <!-- Shayane Barcellos -->
+    <div class="card">
+        <div class="nome">Shayane Barcellos</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5291</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5391</span></div>
+        </div>
+    </div>
+
+    <!-- Silvio Eduardo Fontana Boff -->
+    <div class="card">
+        <div class="nome">Silvio Eduardo Fontana Boff</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5282</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5382</span></div>
+        </div>
+    </div>
+
+    <!-- Simone Pinto da Silva -->
+    <div class="card">
+        <div class="nome">Simone Pinto da Silva</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5278</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5378</span></div>
+        </div>
+    </div>
+
+    <!-- Suelen Fonseca Correa -->
+    <div class="card">
+        <div class="nome">Suelen Fonseca Correa</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5235</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5335</span></div>
+        </div>
+    </div>
+
+    <!-- Suelen Tavares Gil -->
+    <div class="card">
+        <div class="nome">Suelen Tavares Gil</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5265</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5365</span></div>
+        </div>
+    </div>
+
+    <!-- Tamires Dias Quadros -->
+    <div class="card">
+        <div class="nome">Tamires Dias Quadros</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5226</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5326</span></div>
+        </div>
+    </div>
+
+    <!-- Tássia Tavares da Silveira -->
+    <div class="card">
+        <div class="nome">Tássia Tavares da Silveira</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5305</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5405</span></div>
+        </div>
+    </div>
+
+    <!-- Thamily Diandra Lima Rodrigues -->
+    <div class="card">
+        <div class="nome">Thamily Diandra Lima Rodrigues</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5289</span></div>
+        </div>
+    </div>
+
+    <!-- Thayana Cardoso Chaves -->
+    <div class="card">
+        <div class="nome">Thayana Cardoso Chaves</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5306</span></div>
+        </div>
+    </div>
+
+    <!-- Thiago Cecchini Brunetto -->
+    <div class="card">
+        <div class="nome">Thiago Cecchini Brunetto</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5251</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5351</span></div>
+        </div>
+    </div>
+
+    <!-- Thomaz Coradini -->
+    <div class="card">
+        <div class="nome">Thomaz Coradini</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5260</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5360</span></div>
+        </div>
+    </div>
+
+    <!-- Tiago Gornicki Schneider -->
+    <div class="card">
+        <div class="nome">Tiago Gornicki Schneider</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5266</span></div>
+        </div>
+    </div>
+
+    <!-- Vandréia Chaves dos Santos -->
+    <div class="card">
+        <div class="nome">Vandréia Chaves dos Santos</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5230</span></div>
+        </div>
+    </div>
+
+    <!-- Vanessa Dal Pozzo da Rosa -->
+    <div class="card">
+        <div class="nome">Vanessa Dal Pozzo da Rosa</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5256</span></div>
+        </div>
+    </div>
+
+    <!-- Viviane Freitas Da Silva -->
+    <div class="card">
+        <div class="nome">Viviane Freitas Da Silva</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5255</span></div>
+        </div>
+    </div>
+
+    <!-- Werner da Silveira Rehm -->
+    <div class="card">
+        <div class="nome">Werner da Silveira Rehm</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5210</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5310</span></div>
+        </div>
+    </div>
+
+    <!-- William Bernardo -->
+    <div class="card">
+        <div class="nome">William Bernardo</div>
+        <div class="ramais">
+            <div class="ramal-item"><span class="ramal-tipo">SIP:</span><span class="ramal-numero">5257</span></div>
+            <div class="ramal-item"><span class="ramal-tipo">WEB:</span><span class="ramal-numero">5357</span></div>
+        </div>
+    </div>
 
 </div>
 
